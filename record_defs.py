@@ -120,6 +120,34 @@ apt_rwy_record_pri = {
 		'rwy_desc' : (102, 22)
 	}
 
+hlpt_record_pri = {
+		'icao_ident' : (7, 4),
+		'icao_code' : (11, 2),
+		'designator' : (14, 3),
+		'pad_ident' : (17, 5),
+		'cont_rec' : (22, 1),
+		'spd_limit_alt' : (23, 5),
+		'longest_rwy' : (28, 3),
+		'ifr_cap' : (31, 1),
+		'longest_rwy_surf' : (32, 1),
+		'ref_lat' : (33, 9),
+		'ref_lon' : (42, 10),
+		'mag_var' : (52, 5),
+		'hlpt_elev' : (57, 5),
+		'spd_limit' : (62, 3),
+		'rcmd_navaid' : (65, 4),
+		'icao_code2' : (69, 2),
+		'trns_alt' : (71, 5),
+		'trns_lvl' : (76, 5),
+		'pub_mil' : (81, 1),
+		'tz' : (82, 3),
+		'dst' : (85, 1),
+		'pad_dim' : (86, 6),
+		'mag_true' : (92, 1),
+		'res2' : (93, 1),
+		'hlpt_name' : (94, 30)
+	}
+
 record_map = {
 	('A', 'S') : empty_record,						# MORA
 	('D', '')  : empty_record,						# VHF Navaid
@@ -133,7 +161,7 @@ record_map = {
 	('E', 'U') : empty_record,						# Airway Restrictions
 	('E', 'V') : empty_record,						# Communications
 
-	('H', 'A') : empty_record,						# Heliport Pads
+	('H', 'A') : hlpt_record_pri,					# Heliport Pads
 	('H', 'C') : wpt_record_pri,					# Heliport Wpts
 	('H', 'D') : apt_proc_record_pri,				# Heliport SIDs
 	('H', 'E') : apt_proc_record_pri,				# Heliport STARs
